@@ -1,0 +1,30 @@
+language: node_js
+
+node_js:
+  - 16
+
+before_script:
+  - npm install
+
+script:
+  - npm run test:headless
+
+before_deploy:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/ng-twitter
+  on:
+    branch: main
+
+notifications:
+    webhooks: https://travis-for-jira-prod.toolsplus.app/travis/notifications?token=75d54254-2b4b-3f4a-a128-5efb00a94836
+    on_success: always
+    on_failure: always
+    on_start: always
+    on_cancel: always
+    on_error: always
+    
