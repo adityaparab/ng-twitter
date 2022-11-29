@@ -7,9 +7,6 @@ jobs:
     docker:
       - image: cimg/node:16.13.1-browsers
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "93:fc:74:bf:f7:48:4c:0e:af:28:1a:59:1c:fc:c9:e5"
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - run:
@@ -27,4 +24,3 @@ jobs:
             - "node_modules"
       - run: yarn test
       - run: yarn build
-      - run: yarn deploy
