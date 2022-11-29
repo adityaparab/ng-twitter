@@ -7,7 +7,7 @@
     "build": "ng build --base-href /ng-twitter/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false",
-    "deploy": "ngh --dir dist/ng-twitter",
+    "deploy": "ngh --dir dist/ng-twitter --no-silent",
     "test:watch": "ng test",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
     "tdd": "ng test"
