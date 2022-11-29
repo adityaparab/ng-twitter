@@ -9,7 +9,8 @@
     "test": "ng test --watch=false",
     "deploy": "ngh --dir dist/ng-twitter",
     "test:watch": "ng test",
-    "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
+    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
+    "tdd": "ng test"
   },
   "private": true,
   "dependencies": {
